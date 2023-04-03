@@ -74,6 +74,7 @@ body{
     align-items: center;
     gap: 20px;
     color: black;
+    outline: none;
 }
 header nav ul a:hover{
     color: rgb(102 201 211);
@@ -132,8 +133,38 @@ header .footer .social ul{
 
 }
 /* header mobile */
-.header-mobile .collapse{
+.header-mobile .container-fluid{
+    background: linear-gradient(308deg,rgb(229,234,238),rgb(222, 227, 231));
+    border: none;
+}
+.header-mobile .container-fluid .navbar-toggler{
+    background: linear-gradient(216deg,rgb(229,234,238),rgb(222, 227, 231));
+    outline: none;
+    padding: 10px !important;
+    border: none;
+}
+.header-mobile .container-fluid .navbar-brand{
+    padding-left:25px !important;
     
+}
+.header-mobile .container-fluid .logo{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    padding: 5px !important;
+
+    border-radius: 50%;
+    transition: all 0.5s;
+   
+}
+.header-mobile .container-fluid .logo img{ 
+    width: 66px;
+        border-radius: 50%;
+}
+.header-mobile .collapse{
+    transition: all 0.5s ease;
+    background-color: aqua;
 }
 .header-mobile .collapse .box-my{ 
     position: fixed;
@@ -142,23 +173,27 @@ header .footer .social ul{
     left: 0px;
     top: 0;
     z-index: 1000;
+    transition: all 0.5s ease;
+    
 }
 .header-mobile .collapse .box-my .main{ 
  border-right: 1px solid black;
  background: linear-gradient(142deg,rgb(229,234,238),rgb(222, 227, 231));
-
+position: relative;
+transition: all 0.5s ease;
 }
 .header-mobile .collapse .box-my .logo{ 
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: flex-start;
-    margin-bottom: 122px !important;
+    /* margin-bottom: 122px !important; */
     /* border: 1px solid blue; */
     /* background-color: rgb(201, 83, 201); */
 
     border-radius: 50%;
     transition: all 0.5s;
+    margin: 70px 50px 122px 12px !important;
 }
 .header-mobile .collapse .box-my .logo img{ 
     width: 142px;
@@ -193,6 +228,8 @@ header .footer .social ul{
 .header-mobile .collapse .box-my .footer .social{
     display: flex;
     flex-direction: column;
+    padding-left: 38px !important;
+
 }
 .header-mobile .collapse .box-my .footer .social .title{
     font-size: 18px;
@@ -215,11 +252,11 @@ header .footer .social ul{
     color: black;
 }
 .header-mobile .collapse .box-my .footer .social ul li a i{
-   font-size: 30px;
+    font-size: 41px;
    transition: all 0.3s;
 }
 .header-mobile .collapse .box-my .footer .social ul li a:hover i{
-    font-size: 35px;
+    font-size: 38px;
     color: rgb(255, 255, 255);
     background: linear-gradient(142deg, rgba(148,236,84,1) 0%, rgba(121,228,191,1) 26%, rgba(92,227,200,1) 50%, rgba(21,106,164,1) 100%);
 
@@ -227,6 +264,33 @@ header .footer .social ul{
 .header-mobile .collapse .box-my .cover{
     background-color: black;
     opacity: 0.5;
+}
+.header-mobile .collapse .box-my .close{
+    position: absolute;
+    right: 23px;
+    top: 46px;
+    font-size: 25px;
+    background-color: #f7f7f7d1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 1px rgb(255, 255, 255),
+                -1px -1px 2px 1px rgb(255, 255, 255);
+}
+.header-mobile .collapse .box-my .close:hover{
+ 
+    font-size: 28px;
+    background-color: rgb(255, 0, 0);
+    box-shadow: 1px 1px 3px 1px rgb(255, 255, 255),
+    -1px -1px 3px 1px rgb(255, 255, 255);
+
+}
+.header-mobile .collapse .box-my .main nav{
+    margin: 70px 50px 122px 12px !important;
 }
 /* sildebar end */
 
@@ -420,6 +484,16 @@ section{
     justify-content: center;
     align-items: center;
     width: 100%;
+    gap: 40px;
+}
+.pricing .row .table-title-price ul li{
+  display: flex;
+
+  align-items: center;
+ }
+.pricing .row .table-title-price ul li i{
+   font-size: 20px;
+   color: red;
 }
 .pricing .row .main-title{
    display: flex;
@@ -461,6 +535,8 @@ align-items: center;
     background: linear-gradient(142deg,rgb(229,234,238),rgb(250,251,252));
     border-radius: 5px;
     color: black;
+    font-size: 14px;
+    font-weight: 400;
 }
 .pricing .row .price-box .typeprice ul li a.active  {
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.1);
@@ -511,10 +587,16 @@ align-items: center;
     padding: 15px 50px !important;
     background: linear-gradient(142deg,rgb(237, 232, 232),rgb(222, 220, 220),rgba(255, 255, 255, 0.849));
     border-radius: 5px;
-    color:rgb(20 82 5);
-  
+    transition: all 0.2s ease-in;
+    color:rgb(65 209 209);
+
+}
+.pricing .row .price-box .buttom-type a:hover{
  
-    
+    background: linear-gradient(142deg,rgb(133, 238, 174),rgb(222, 220, 220),rgb(140 247 209 / 85%));
+    color: rgb(65 209 209);
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+
 }
 
 
@@ -522,21 +604,33 @@ align-items: center;
 .contact{
 
 }
+.contact .container-fluid{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0px!important;
+}
 .contact .row{
-    width: 94% ;
+    /* padding: 50px !important; */
+   
 }
 .contact .row .box-left{
     background: linear-gradient(142deg,rgb(229,234,238),rgb(250,251,252));
-    display: flex;
+    /* display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
     padding: 20px !important;
     /* height: max-content; */
     min-height: 53vh;
     margin: 0 9px !important;
     border-radius: 5px;  
-      box-shadow: 1px 1px 2px 2px rgba(255, 255, 255, 1);
+    display: flex;
+    box-shadow: 1px 1px 2px 2px rgba(255, 255, 255, 1);
+    /* align-items: center; */
+    justify-content: center;
+    margin: 10px 10px !important;
 
 }
 .contact .row .box-left .box-img{
@@ -544,10 +638,10 @@ align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10%;
+    /* height: 10%; */
 }
 .contact .row .box-left .box-img img{
-    width: 50%;
+    width: 100%;
     border-radius: 5px;
     height: 100%;
   
@@ -599,8 +693,8 @@ align-items: center;
     padding: 20px !important;
     border-radius: 5px;
     box-shadow: 1px 1px 2px 2px rgba(255, 255, 255, 1);
+    margin: 10px 10px !important;
 
-    
 }
 .box-right form {
     display: flex;
@@ -610,7 +704,7 @@ align-items: center;
     
 }
 .box-right .box{
-width: 95%;
+/* width: 95%; */
 }
 .box-right .box-12{
 width: 100%;
